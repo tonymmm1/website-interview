@@ -2,10 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { Button, Text, Input, Grid, Divider, Menu, MenuList, MenuItem, MenuButton } from '@chakra-ui/react'
+import { Button, Text, Grid, Divider, Menu, MenuList, MenuItem, MenuButton } from '@chakra-ui/react'
 import { IconButton } from '@chakra-ui/react'
 import { HamburgerIcon, ExternalLinkIcon } from '@chakra-ui/icons'
-import { getURL } from 'next/dist/shared/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
