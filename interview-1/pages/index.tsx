@@ -12,6 +12,24 @@ const githubLink = 'https://github.com/JoshuaMKW';
 const githubDownloadLink = 'https://github.com/JoshuaMKW/GeckoLoader/releases/latest';
 const githubReadmeLink = 'https://github.com/JoshuaMKW/GeckoLoader';
 
+const getAvatarInfo = () => {
+  return (
+    <div>
+      <Text className={styles.titleauthor}>
+        by JoshuaMK
+      </Text>
+      <Image
+        onClick={() => window.open(githubLink)}
+        className={styles.titleicon}
+        src="https://avatars.githubusercontent.com/u/60854312"
+        width={100}
+        height={100}
+        alt="avatar"
+      />
+    </div>
+  )
+}
+
 const getTitleComponent = () => {
   return (
     <div className={styles.titledrop}>
@@ -36,24 +54,6 @@ const getTitleComponent = () => {
         GeckoLoader
       </h2>
       {getAvatarInfo()}
-    </div>
-  )
-}
-
-const getAvatarInfo = () => {
-  return (
-    <div>
-      <Text className={styles.titleauthor}>
-        by JoshuaMK
-      </Text>
-      <Image
-        onClick={() => window.open(githubLink)}
-        className={styles.titleicon}
-        src="https://avatars.githubusercontent.com/u/60854312"
-        width={100}
-        height={100}
-        alt="avatar"
-      />
     </div>
   )
 }
