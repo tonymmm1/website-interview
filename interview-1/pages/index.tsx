@@ -101,6 +101,97 @@ const getGeckoGraphs = () => {
   )
 }
 
+const getGeckoLoaderPreviews = () => {
+  return (
+    <div>
+      <Grid className={styles.previewgrid}>
+        <Image className={styles.preview}
+          src="/preview.png"
+          width={400}
+          height={400}
+          alt="preview"
+        />
+        <Image className={styles.preview}
+          src="/preview_cli.png"
+          width={400}
+          height={400}
+          alt="preview"
+        />
+      </Grid>
+    </div>
+  )
+}
+
+const getGeckoLoaderInfo = () => {
+  return (
+    <div className={styles.body}>
+      <div className={styles.pointpanel}>
+        {getEmphasizedHeaderText('What is GeckoLoader?')}
+        <Text className={styles.description}>
+          GeckoLoader is a command line tool and GUI that allows you to take full advantage of Gecko Codes.
+          With GeckoLoader you can easily patch your games with Gecko Codes, allowing you to
+          customize any GameCube or Wii game to your liking.
+        </Text>
+      </div>
+      <div className={styles.pointpanel}>
+        {getEmphasizedHeaderText('How does it work?')}
+        <Text className={styles.description}>
+          GeckoLoader works by patching your game's memory with Gecko Codes.
+          It does this by injecting a Gecko Code Handler and your Gecko Codes
+          into the executable of your GameCube or Wii game. It then modifies the code further
+          such that there is memory for the codes to reside. This allows you to customize your game to your liking.
+        </Text>
+      </div>
+      <div className={styles.pointpanel}>
+        {getEmphasizedHeaderText('Why should I use it?')}
+        {getGeckoGraphs()}
+        <Text className={styles.description}>
+          GeckoLoader works by patching your game's memory with Gecko Codes.
+          It does this by injecting a Gecko Code Handler and your Gecko Codes
+          into the executable of your GameCube or Wii game. It then modifies the code further
+          such that there is memory for the codes to reside. This allows you to customize your game to your liking.
+        </Text>
+      </div>
+      <div className={styles.pointpanel}>
+        {getEmphasizedHeaderText('How can I use it?')}
+        <Text className={styles.description}>
+          To use GeckoLoader, you first have to obtain the game of your choice.
+          You can do this legally by using the GameCube or Wii game you own to dump an ISO file onto an external storage device.
+          You can then use GeckoLoader to patch your ISO with Gecko Codes.
+          To do this, you can open the application as a GUI, and supply the prompts with the proper information.
+          For further information on how to use GeckoLoader,
+          see the <a className={styles.inlinelink} href={githubReadmeLink}>README.</a>
+        </Text>
+      </div>
+      <div className={styles.pointpanel}>
+        {getEmphasizedHeaderText('Where can I download it?')}
+        <Text className={styles.description}>
+          You can download GeckoLoader below! It is available for Windows and Linux.
+          Additionally, you can download the source code from the GitHub repository.
+        </Text>
+        <Grid className={styles.buttongrid} templateColumns="repeat(2, 1fr)">
+          <Button
+            className={styles.linkbutton}
+            colorScheme='green'
+            variant='solid'
+            onClick={() => window.open(githubDownloadLink)}
+          >
+            Download Page
+          </Button>
+          <Button
+            className={styles.linkbutton}
+            colorScheme='green'
+            variant='solid'
+            onClick={() => window.open(githubReadmeLink)}
+          >
+            Source Code
+          </Button>
+        </Grid>
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -118,87 +209,8 @@ export default function Home() {
               <i>Experience the unlocked potential of Gecko Codes.</i>
             </span>
           </Text>
-          <div>
-            <Grid className={styles.previewgrid}>
-              <Image className={styles.preview}
-                src="/preview.png"
-                width={400}
-                height={400}
-                alt="preview"
-              />
-              <Image className={styles.preview}
-                src="/preview_cli.png"
-                width={400}
-                height={400}
-                alt="preview"
-              />
-            </Grid>
-          </div>
-          <div className={styles.body}>
-            <div className={styles.pointpanel}>
-              {getEmphasizedHeaderText('What is GeckoLoader?')}
-              <Text className={styles.description}>
-                GeckoLoader is a command line tool and GUI that allows you to take full advantage of Gecko Codes.
-                With GeckoLoader you can easily patch your games with Gecko Codes, allowing you to
-                customize any GameCube or Wii game to your liking.
-              </Text>
-            </div>
-            <div className={styles.pointpanel}>
-              {getEmphasizedHeaderText('How does it work?')}
-              <Text className={styles.description}>
-                GeckoLoader works by patching your game's memory with Gecko Codes.
-                It does this by injecting a Gecko Code Handler and your Gecko Codes
-                into the executable of your GameCube or Wii game. It then modifies the code further
-                such that there is memory for the codes to reside. This allows you to customize your game to your liking.
-              </Text>
-            </div>
-            <div className={styles.pointpanel}>
-              {getEmphasizedHeaderText('Why should I use it?')}
-              {getGeckoGraphs()}
-              <Text className={styles.description}>
-                GeckoLoader works by patching your game's memory with Gecko Codes.
-                It does this by injecting a Gecko Code Handler and your Gecko Codes
-                into the executable of your GameCube or Wii game. It then modifies the code further
-                such that there is memory for the codes to reside. This allows you to customize your game to your liking.
-              </Text>
-            </div>
-            <div className={styles.pointpanel}>
-              {getEmphasizedHeaderText('How can I use it?')}
-              <Text className={styles.description}>
-                To use GeckoLoader, you first have to obtain the game of your choice.
-                You can do this legally by using the GameCube or Wii game you own to dump an ISO file onto an external storage device.
-                You can then use GeckoLoader to patch your ISO with Gecko Codes.
-                To do this, you can open the application as a GUI, and supply the prompts with the proper information.
-                For further information on how to use GeckoLoader,
-                see the <a className={styles.inlinelink} href={githubReadmeLink}>README.</a>
-              </Text>
-            </div>
-            <div className={styles.pointpanel}>
-              {getEmphasizedHeaderText('Where can I download it?')}
-              <Text className={styles.description}>
-                You can download GeckoLoader below! It is available for Windows and Linux.
-                Additionally, you can download the source code from the GitHub repository.
-              </Text>
-              <Grid className={styles.buttongrid} templateColumns="repeat(2, 1fr)">
-                <Button
-                  className={styles.linkbutton}
-                  colorScheme='green'
-                  variant='solid'
-                  onClick={() => window.open(githubDownloadLink)}
-                >
-                  Download Page
-                </Button>
-                <Button
-                  className={styles.linkbutton}
-                  colorScheme='green'
-                  variant='solid'
-                  onClick={() => window.open(githubReadmeLink)}
-                >
-                  Source Code
-                </Button>
-              </Grid>
-            </div>
-          </div>
+          {getGeckoLoaderPreviews()}
+          {getGeckoLoaderInfo()}
         </div>
       </main >
     </>
