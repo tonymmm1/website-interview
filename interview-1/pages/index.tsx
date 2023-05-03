@@ -145,10 +145,17 @@ const getGeckoLoaderInfo = () => {
         {getEmphasizedHeaderText('Why should I use it?')}
         {getGeckoGraphs()}
         <Text className={styles.description}>
-          GeckoLoader works by patching your game's memory with Gecko Codes.
-          It does this by injecting a Gecko Code Handler and your Gecko Codes
-          into the executable of your GameCube or Wii game. It then modifies the code further
-          such that there is memory for the codes to reside. This allows you to customize your game to your liking.
+          GeckoLoader is the best way to use Gecko Codes. It is the only tool that allows you to use
+          Gecko Codes without the space limitations of the standard Gecko Code Handler.
+          Additionally, GeckoLoader is faster than the standard Gecko Code Handler.
+          This is because GeckoLoader uses a more efficient method of patching your game.
+          This allows you to use more Gecko Codes, and use them faster.
+          GeckoLoader is also a command line tool.
+          This allows you to easily automate the patching process.
+          This is useful for speedrunners, who often need to patch their games with the same Gecko Codes.
+          GeckoLoader is also a GUI tool.
+          This allows you to easily patch your games with Gecko Codes without having to use the command line.
+          Giving you the best of both worlds.
         </Text>
       </div>
       <div className={styles.pointpanel}>
